@@ -34,7 +34,7 @@ public class AreaProgram {
 				  //find the area of a circle
 					  System.out.print("Area of a Circle\nEnter the circle's radius: ");
 					  double radius = keyboard.nextDouble();
-					  area = Math.pow(radius, 2) * Math.PI;
+					  area = Math.PI * Math.pow(radius, 2);
 					  System.out.println("area of the circle is: " + area);
 					  break;
 				  case 3:
