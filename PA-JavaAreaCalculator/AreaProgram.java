@@ -43,48 +43,48 @@ public class AreaProgram {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-	  Scanner keyboard = new Scanner(System.in); //the scanner object to read user input
-	  int choice = 0; //the menu option choice given by the user
-	  double area = 0.0; //the area of the shape chosen by the user
+		Scanner keyboard = new Scanner(System.in); //the scanner object to read user input
+		int choice = 0; //the menu option choice given by the user
+		double area = 0.0; //the area of the shape chosen by the user
 
-	  do {
-		//display the menu and get the user's choice
-	    System.out.print("=== AREA CALCULATOR ===\n1. Square\n2. Circle\n3. Triangle\n4. Exit\n"); //corrected one statement per line
-		System.out.print("Enter the desired option[1-4]: ");
-		choice = keyboard.nextInt();
+		do {
+			//display the menu and get the user's choice
+			System.out.print("=== AREA CALCULATOR ===\n1. Square\n2. Circle\n3. Triangle\n4. Exit\n");
+			System.out.print("Enter the desired option[1-4]: ");
+			choice = keyboard.nextInt();
 
-		  //validate the user's choice
-		  if (choice < 1 || choice > 4)
-		    System.out.println("Option is invalid. Please provide a valid option."); //corrected One statement per line
-		  else
-		    switch (choice) {
-			  case 1:
-			  //find the area of a square
-			    System.out.print("Area of a Square\nEnter the square's lenght: ");
-				double length = keyboard.nextDouble(); //the length of the square
-				area = calculateSquareArea(length);
-				System.out.println("area of the square is: " + area);
-				break;
-				  case 2:
-				  //find the area of a circle
-					  System.out.print("Area of a Circle\nEnter the circle's radius: ");
-					  double radius = keyboard.nextDouble(); //the radius of the circle
-					  area = calculateCircleArea(radius);
-					  System.out.println("area of the circle is: " + area);
-					  break;
-				  case 3:
-				  //find the area of a triangle
-					  System.out.print("Area of a Triangle\nEnter the triangle's base: ");
-					  double base = keyboard.nextDouble(); //the base of the triangle
-					  System.out.print("Area of a Triangle\nEnter the triangle's height: "); //corrected one statement per line
-					  double height = keyboard.nextDouble(); //the height of the triangle
-					  area = calculateTriangleArea(base, height);
-					  System.out.println("area of the triangle is: " + area);
-					  break;
-			  }
-	  } while (choice != 4);
+			//validate the user's choice
+			if (choice < 1 || choice > 4)
+		    	System.out.println("Option is invalid. Please provide a valid option.");
+			else
+				switch (choice) {
+					case 1:
+			  			//find the area of a square
+			    		System.out.print("Area of a Square\nEnter the square's lenght: ");
+						double length = keyboard.nextDouble(); //the length of the square
+						area = calculateSquareArea(length);
+						System.out.println("area of the square is: " + area);
+						break;
+					case 2:
+				  		//find the area of a circle
+					  	System.out.print("Area of a Circle\nEnter the circle's radius: ");
+					  	double radius = keyboard.nextDouble(); //the radius of the circle
+					  	area = calculateCircleArea(radius);
+					  	System.out.println("area of the circle is: " + area);
+					  	break;
+				  	case 3:
+				  		//find the area of a triangle
+					  	System.out.print("Area of a Triangle\nEnter the triangle's base: ");
+					  	double base = keyboard.nextDouble(); //the base of the triangle
+					  	System.out.print("Area of a Triangle\nEnter the triangle's height: ");
+					  	double height = keyboard.nextDouble(); //the height of the triangle
+					  	area = calculateTriangleArea(base, height);
+					  	System.out.println("area of the triangle is: " + area);
+					  	break;
+			  	}
+	  	} while (choice != 4);
 	  
-	  System.out.println("exiting the program...");
-	  keyboard.close();
-  }
+		System.out.println("exiting the program...");
+		keyboard.close();
+	}
 }
